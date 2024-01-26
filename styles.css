@@ -1,0 +1,30 @@
+:root {
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+}
+
+#banner {
+  width: 100vw;
+  /* height: 80vh; */
+}
+
+main,
+#closing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  width: 800px;
+  height: auto;
+}
