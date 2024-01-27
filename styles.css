@@ -8,17 +8,23 @@ body {
   box-sizing: border-box;
 }
 
+/* #intro,
+#closing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem 5rem;
+} */
+
 body {
   display: grid;
 }
 
 #banner {
   width: 100vw;
-  /* height: 80vh; */
 }
 
-main,
-#closing {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,4 +33,9 @@ main,
 img {
   width: 800px;
   height: auto;
+}
+
+#intro img {
+  width: 400px;
+  height: 500px;
 }
