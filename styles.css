@@ -6,6 +6,10 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  display: grid;
+  justify-items: center;
+  gap: 3rem;
+  position: relative;
 }
 
 /* #intro,
@@ -15,6 +19,16 @@ body {
   align-items: center;
   padding: 0rem 5rem;
 } */
+
+#intro {
+  display: grid;
+  justify-items: center;
+}
+
+#intro > div:first-child,
+#closing {
+  width: 70%;
+}
 
 body {
   display: grid;
@@ -38,4 +52,15 @@ img {
 #intro img {
   width: 400px;
   height: 500px;
+}
+
+#scroll-to-top {
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  border: 1px solid black;
+}
+
+#scroll-to-top > img {
+  width: 2rem;
 }
