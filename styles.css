@@ -14,14 +14,6 @@ body {
   position: relative;
 }
 
-/* #intro,
-#closing {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0rem 5rem;
-} */
-
 body {
   display: grid;
   background-color: black;
@@ -31,7 +23,12 @@ body {
 }
 
 #banner {
-  width: 100vw;
+  min-width: 100vw;
+  min-height: 400px;
+  background-image: url("./assets/tibetan-prayer-flag2.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1,
@@ -51,25 +48,30 @@ h2 {
   height: 500px;
 }
 
-#intro > div {
+#intro > div,
+#closing {
   display: grid;
-  gap: 1.8rem;
+  gap: 1rem;
 }
 
-#intro > div > div {
+#intro > div > div,
+#closing {
   line-height: 1.5rem;
 }
 
-#intro > div:first-child,
-#closing {
+#intro > div:first-child {
   width: 65%;
+}
+
+#intro-img-container {
+  display: flex;
+  gap: 2rem;
 }
 
 main {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  /* align-items: center; */
 }
 
 #card-container {
@@ -77,9 +79,19 @@ main {
   gap: 2rem;
 }
 
+.card {
+  display: grid;
+  gap: 0.5rem;
+}
+
 img {
   width: 800px;
   height: auto;
+}
+
+#closing {
+  margin-bottom: 4rem;
+  width: 50%;
 }
 
 #scroll-to-top {
