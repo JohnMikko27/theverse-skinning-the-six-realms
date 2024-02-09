@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skinning the Six Realms</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./index.js"></script>
+    <script defer src="./slider.js"></script>
   </head>
   <body>
     <header>
@@ -35,14 +37,17 @@
       <div>
         <h2>First the Buddhist version of the Six Realms</h2>
         <div id="intro-img-container">
-          <img src="./assets/Buddha-Tibetan-Wheel-of-Life_large.webp" alt="" />
-          <img src="./assets/tibetan6realms.jpeg" alt="" />
+          <img
+            src="./assets/img/Buddha-Tibetan-Wheel-of-Life_large.webp"
+            alt=""
+          />
+          <img src="./assets/img/tibetan6realms.jpeg" alt="" />
         </div>
       </div>
     </section>
     <main>
       <h2>The Verse’s “Skinning The Six Realms”</h2>
-      <div id="card-container">
+      <!-- <div id="card-container">
         <div class="card">
           <div>Star Wars & The Six Realms.</div>
           <img loading="lazy" src="./assets/starwars6r.jpg" alt="" />
@@ -67,6 +72,21 @@
           <div>Gaming & The Six Realms.</div>
           <img loading="lazy" src="./assets/gaming6r.jpg" alt="" />
         </div>
+      </div> -->
+
+      <div id="container">
+        <div id="image-container"></div>
+        <div class="arrowContainer left">
+          <img
+            class="arrow"
+            src="./assets/icons/arrow-back.png"
+            alt="Previous"
+          />
+        </div>
+        <div class="arrowContainer right">
+          <img class="arrow" src="./assets/icons/rightArrow.png" alt="Next" />
+        </div>
+        <div id="circleContainer"></div>
       </div>
     </main>
     <div id="closing">
@@ -84,7 +104,7 @@
       <div>Contact us at info@versebuilding.com</div>
     </div>
     <a id="scroll-to-top" href="#banner">
-      <img src="./assets/up-arrow.png" alt="" />
+      <img src="./assets/icons/up-arrow.png" alt="" />
     </a>
   </body>
 </html>
