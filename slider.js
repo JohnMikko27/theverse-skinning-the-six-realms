@@ -22,21 +22,26 @@ arr.push(img5)
 arr.push(img6)
 
 let currentIndex = 0;
-const getCurrentIndex = () => currentIndex;
 
 const changeSlide = () => {
     const left = document.querySelector('.left');
     const right = document.querySelector('.right');
 
     left.addEventListener('click', () => {
-        if (currentIndex == 0) return;
-        currentIndex -=1;
+        if (currentIndex === 0) {
+            currentIndex = arr.length - 1;
+        } else {
+            currentIndex -=1;
+        }
         displayImg(currentIndex);
     })
 
     right.addEventListener('click', () => {
-        if (currentIndex == arr.length - 1) return;
-        currentIndex += 1;
+        if (currentIndex === arr.length - 1) {
+            currentIndex = 0;
+        } else {
+            currentIndex += 1;
+        }
         displayImg(currentIndex);
     })
 }
