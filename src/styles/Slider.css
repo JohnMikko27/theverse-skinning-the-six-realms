@@ -1,0 +1,32 @@
+:root {
+  --main-bg: #303131;
+  --secondary-bg: #9fe6a6;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.arrow {
+  position: absolute;
+  width: 2rem;
+  background-color: var(--main-bg);
+  /* -webkit-filter: opacity(0.5) drop-shadow(0 0 0 purple);
+  filter: opacity(0.2) drop-shadow(0 0 0 purple); */
+}
+
+.right {
+  top: 25%;
+  right: 10%;
+}
+
+.left {
+  top: 25%;
+  left: 10%;
+}
+
+.image {
+  width: 40rem;
+}

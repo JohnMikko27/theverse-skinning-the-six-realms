@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
+import Slider from "./components/Slider";
 
 import "./App.css";
 
@@ -10,6 +11,7 @@ function App() {
     <>
       <Nav/>
       <section className="intro">
+        {/* condense the words on the html page; make it so that it's not too lengthy*/}
         <div>
           Every person’s life experience from birth to death is a hero’s journey through a 
           dynamic, emergent world comprised of interconnected complex evolving systems. 
@@ -26,7 +28,9 @@ function App() {
         <img className="tree" src="src/assets/img/tree.png" alt="" />
       </section>
       <Header text={"A Glimpse Into The Verse: Skinning The Six Realms: A World-making practice"}/>
-      
+      <section className="slider-container">
+        <Slider/>
+      </section>
     </>
   );
 }
