@@ -1,0 +1,25 @@
+:root {
+  --main-bg: #303131;
+  --secondary-bg: #9fe6a6;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: var(--main-bg);
+  color: white;
+}
+
+#root {
+  padding: 2rem;
+}
+
+.intro {
+  display: grid;
+  justify-items: center;
+}
+
+.tree {
+  width: 20rem;
+  height: auto;
+}
