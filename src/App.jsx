@@ -2,6 +2,7 @@ import { useState } from "react";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
+import Info from "./components/Info";
 
 import "./App.css";
 
@@ -27,10 +28,18 @@ function App() {
         </div>
         <img className="tree" src="src/assets/img/tree.png" alt="" />
       </section>
-      <Header text={"A Glimpse Into The Verse: Skinning The Six Realms: A World-making practice"}/>
+
       <section className="slider-container">
+        <Header text={"A Glimpse Into The Verse: Skinning The Six Realms: A World-making practice"}/>
         <Slider/>
       </section>
+      
+      <section className="info">
+        <Header text={"Welcome to The Verse thought experiment/thought exercise..."}/>
+        <Info/>
+      </section>
+
+      {"update readme with how to run it"}
     </>
   );
 }
