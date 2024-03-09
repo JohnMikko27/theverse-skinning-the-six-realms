@@ -1,3 +1,5 @@
+import "../styles/Info.css";
+
 const Info = () => {
   return (
     <>

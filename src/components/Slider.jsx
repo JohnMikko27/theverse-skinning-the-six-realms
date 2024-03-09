@@ -3,10 +3,6 @@ import "../styles/Slider.css";
 import Card from "./Card";
 
 const Slider = () => {
-  // a main container
-  // left and right buttons
-  // the card itself
-  // just have left and right buttons - no circles at the bottom
   const [index, setIndex] = useState(0);
   const urls = [
     "src/assets/img/dragonb6t.jpg", 

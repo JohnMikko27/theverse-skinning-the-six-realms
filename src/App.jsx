@@ -30,16 +30,14 @@ function App() {
       </section>
 
       <section className="slider-container">
-        <Header text={"A Glimpse Into The Verse: Skinning The Six Realms: A World-making practice"}/>
+        <Header text={"A Glimpse Into The Verse: Skinning The Six Realms: A World-making Practice"}/>
         <Slider/>
       </section>
-      
+
       <section className="info">
         <Header text={"Welcome to The Verse thought experiment/thought exercise..."}/>
         <Info/>
       </section>
-
-      {"update readme with how to run it"}
     </>
   );
 }

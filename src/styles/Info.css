@@ -1,0 +1,14 @@
+.info {
+  display: grid;
+  justify-items: center;
+}
+
+.info > div {
+  font-size: 1.25rem;
+}
+
+.info > ul {
+  font-size: 1.15rem;
+  display: grid;
+  gap: 1rem;
+}

@@ -12,6 +12,8 @@ body {
 
 #root {
   padding: 2rem;
+  display: grid;
+  gap: 2rem;
 }
 
 .intro {
@@ -19,7 +21,15 @@ body {
   justify-items: center;
 }
 
+.intro > div {
+  font-size: 1.25rem;
+}
+
 .tree {
-  width: 20rem;
+  width: 40vw;
   height: auto;
+}
+
+.slider-container > h1 {
+  text-align: center;
 }
