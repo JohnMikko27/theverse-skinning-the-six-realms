@@ -12,7 +12,13 @@
 .arrow {
   position: absolute;
   width: 2rem;
-  background-color: var(--main-bg);
+  /* border-radius: 2rem;
+  -webkit-filter: opacity(0.5) drop-shadow(0 0 0 var(--main-bg));
+  filter: opacity(0.8) drop-shadow(0 0 0 var(--main-bg)); */
+}
+
+.arrow:hover {
+  cursor: pointer;
   /* -webkit-filter: opacity(0.5) drop-shadow(0 0 0 purple);
   filter: opacity(0.2) drop-shadow(0 0 0 purple); */
 }

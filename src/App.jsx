@@ -3,7 +3,6 @@ import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
 import Info from "./components/Info";
-
 import "./App.css";
 
 function App() {
@@ -41,5 +40,11 @@ function App() {
     </>
   );
 }
+
+// ask serena what the font is, maybe padding and stuff and line innerHeight, font size and stuff
+// ask her of her latest design; show my current Work; 
+// talk about how I'll make everything look good, add animations, then add the spin the wheel feature
+// talk about the form; the stuff on the form; what we're going to ask, etc. 
+// talk about future plan of asking users to put images and then we create an infographic with those img
 
 export default App;
