@@ -28,8 +28,8 @@ const Slider = () => {
   return (
     <div className="slider">
       {/* change the color of the arrows to be the secondary bg color */}
-      <img onClick={handleLeftClick} className="arrow left" src="src/assets/icons/leftArrow.png" alt="previous" />
-      <img onClick={handleRightClick} className="arrow right" src="src/assets/icons/rightArrow.png" alt="next" />
+      <img onClick={handleLeftClick} className="arrow left" src="src/assets/icons/left-arrow.svg" alt="previous" />
+      <img onClick={handleRightClick} className="arrow right" src="src/assets/icons/right-arrow.svg" alt="next" />
       <Card url={urls[index]}/>
     </div>
   );
