@@ -8,6 +8,7 @@ body {
   margin: 0;
   background-color: var(--main-bg);
   color: white;
+  font-family: sans-serif;
 }
 
 #root {
@@ -31,9 +32,15 @@ body {
   width: 40vw;
   height: auto;
   animation: tree-fade-in linear forwards;
+  /* not compatible with firefox/firefox mobile and safari on ios */
+  /* <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script> */
+  /* use this ^^^ for stuff that don't use these styles */
   animation-timeline: view();
   animation-range-start: cover;
   animation-range-end: contain;
+  /* use clamp for font-size 
+  add that background mask or something from here: https://www.youtube.com/watch?v=rpCQEQAlMIE
+  its near the end of vid*/
 }
 
 @keyframes tree-fade-in {
@@ -45,4 +52,9 @@ body {
 
 .slider-container > h1 {
   text-align: center;
+}
+
+.info {
+  display: grid;
+  justify-items: center;
 }

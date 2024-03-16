@@ -1,3 +1,17 @@
 h1 {
   font-size: 1.7rem;
+  animation: header-animation backwards cubic-bezier(0.19, 1, 0.22, 1);
+  animation-timeline: view(5vh);
+  animation-range-start: contain;
+  animation-range-end: contain;
+}
+
+@keyframes header-animation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
