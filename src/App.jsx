@@ -3,14 +3,14 @@ import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
 import Info from "./components/Info";
-import "./App.css";
+// import "./App.css";
 
 function App() {
 
   return (
     <>
       <Nav/>
-      <section className="intro">
+      <section className="grid justify-items-center px-12 text-lg">
         {/* condense the words on the html page; make it so that it's not too lengthy*/}
         <div>
           Every person’s life experience from birth to death is a hero’s journey through a 
@@ -25,15 +25,15 @@ function App() {
           This leads one to contemplate and reflect on one’s current life circumstances as a manifestation 
           of one’s karma.
         </div>
-        <img className="tree" src="src/assets/img/tree.png" alt="" />
+        <img className="" src="src/assets/img/tree.png" alt="" />
       </section>
 
-      <section className="slider-container">
+      <section className="">
         <Header text={"A Glimpse Into The Verse: Skinning The Six Realms: A World-making Practice"}/>
         <Slider/>
       </section>
 
-      <section className="info">
+      <section className="text-lg">
         <Header text={"Welcome to The Verse thought experiment/thought exercise..."}/>
         <Info/>
       </section>
@@ -46,5 +46,5 @@ function App() {
 // talk about how I'll make everything look good, add animations, then add the spin the wheel feature
 // talk about the form; the stuff on the form; what we're going to ask, etc. 
 // talk about future plan of asking users to put images and then we create an infographic with those img
-
+//https://codesandbox.io/p/sandbox/react-wgftkn?file=%2Fsrc%2FApp.js
 export default App;

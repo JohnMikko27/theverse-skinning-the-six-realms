@@ -1,7 +1,7 @@
 const Card = ({ url }) => {
   return (
     <>
-      <img className="image" src={url} alt="" />
+      <img className=" w-2/3" src={url} alt="Six Realms Skin" />
     </>
   );
 };
