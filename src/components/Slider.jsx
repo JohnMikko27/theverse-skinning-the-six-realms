@@ -1,27 +1,19 @@
 import { useState } from "react";
 import Card from "./Card";
 
-const Slider = () => {
+const Slider = ({ handleSpin }) => {
   const [index, setIndex] = useState(0);
-  const urls = [
-    "src/assets/img/dragonb6t.jpg", 
-    "src/assets/img/gaming6r.jpg",
-    "src/assets/img/starwars6r.jpg",
-    "src/assets/img/studentlife6r.jpg",
-    "src/assets/img/womenmarvel6r.jpg",
-  ];
 
   const handleLeftClick = () => {
-    if (index === 0) setIndex(urls.length - 1);
+    if (index === 0) setIndex(5);
     else setIndex(index - 1);
     console.log("left");
   };
 
   const handleRightClick = () => {
-    if (index === urls.length - 1) setIndex(0);
+    if (index === 5) setIndex(0);
     else setIndex(index + 1);
     console.log("right");
-
   };
 
   return (
@@ -33,7 +25,7 @@ const Slider = () => {
       <img onClick={handleRightClick} 
         className="transition-all  hover:cursor-pointer hover:invert-0 hover:scale-75 invert absolute w-14 right-20 top-1/3" 
         src="src/assets/icons/right-arrow.svg" alt="next" />
-      <Card url={urls[index]}/>
+      <Card index={index} handleSpin={handleSpin}/>
     </div>
   );
 };

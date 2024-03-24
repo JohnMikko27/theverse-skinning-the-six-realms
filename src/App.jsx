@@ -3,9 +3,15 @@ import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
 import Info from "./components/Info";
-// import "./App.css";
+import "./App.css";
 
 function App() {
+  const [realm, setRealm] = useState(0);
+
+  const handleSpin = (winner) => {
+    setRealm(winner);
+    console.log(`this is the winner ${winner}`);
+  };
 
   return (
     <>
@@ -30,20 +36,19 @@ function App() {
 
       <section className="">
         <Header text={"A Glimpse Into The Verse: Skinning The Six Realms: A World-making Practice"}/>
-        <Slider/>
+        <Slider handleSpin={handleSpin}/>
       </section>
 
       <section className="text-lg">
         <Header text={"Welcome to The Verse thought experiment/thought exercise..."}/>
-        <Info/>
+        <Info realm={realm}/>
       </section>
+      {/* <Wheel/> */}
     </>
   );
 }
 
 // ask serena what the font is, maybe padding and stuff and line innerHeight, font size and stuff
-// ask her of her latest design; show my current Work; 
-// talk about how I'll make everything look good, add animations, then add the spin the wheel feature
 // talk about the form; the stuff on the form; what we're going to ask, etc. 
 // talk about future plan of asking users to put images and then we create an infographic with those img
 //https://codesandbox.io/p/sandbox/react-wgftkn?file=%2Fsrc%2FApp.js

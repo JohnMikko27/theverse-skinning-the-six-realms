@@ -1,4 +1,31 @@
-const Info = () => {
+const Info = ( { realm }) => {
+
+  const info = [
+    {realmName: "God realm",
+      description: "a world of ecstasy, beauty and pleasure",
+      childrenInfo: ["Dulled to the world/sated", "Lack compassion/empathy. Can not see the suffering of others"]
+    },
+    {realmName: "Demigod realm",
+      description: "a world of violence, envy, and jealousy",
+      childrenInfo: ["Angry w/ super powers/Continual struggle with other Demi Gods", "Fueled by ego/aggression"] 
+    },  
+    {realmName: "Human realm",
+      description: "a world of purpose, aspirations, and possibilities",
+      childrenInfo: ["Present is old karma", "Future is what you do as human (new karma). One's choices affects one future. Place to make a difference in your rebirth/life"]
+    },
+    {realmName: "Animal realm",
+      description: "a world of instincts, survival, and self preservations",
+      childrenInfo: ["Focused on survival activities. Driven by impulse and instinct, preying on others.", "Animal birth is seen as the result of past sins, and one expiates these sins through suffering in animal form (being hunted, worked, driven, slaughtered, etc.)"]
+    },
+    {realmName: "Hungry Ghost realm",
+      description: "a world of neediness, addictions, and compulsions",
+      childrenInfo: ["Excessive craving and attachments. Never ending hunger or need, which is never satisfied.", "Always looking outside themselves for something to satisfy the craving within. Dependency on substances, fixations to things, and compulsion."]
+    },
+    {realmName: "Hell realm",
+      description: "a world of agony, terror, and depression",
+      childrenInfo: ["Full of suffering", "Experience torment and torture every passing second"]
+    }
+  ];
 
   return (
     <div className="grid gap-6">
@@ -8,50 +35,23 @@ const Info = () => {
         The six realms are also used as a metaphor for the varying psychological states 
         of the human mind
       </div>
-      <ul className="grid gap-4">
-        <li> 
-            God realm - a world of ecstasy, beauty and pleasure.
-          <ul className="">
-            <li className="indent-8 list-disc list-inside">Dulled to the world/sated.</li>
-            <li className="indent-8 list-disc list-inside">Lack compassion/empathy. Can not see the suffering of others.</li>
-          </ul>
-        </li>
-        <li>
-            Demi God realm - a world of violence, envy, and jealousy.
-          <ul className="">
-            <li className="indent-8 list-disc list-inside">Angry w/ super powers/Continual struggle with other Demi Gods</li>
-            <li className="indent-8 list-disc list-inside">Fueled by ego/aggression</li>
-          </ul>
-        </li>
-        <li>
-            Human realm - a world of purpose, aspirations, and possibilities.
-          <ul className="">
-            <li className="indent-8 list-disc list-inside">Present is old karma</li>
-            {/* <li className="indent-8 list-disc list-inside">Future is what you do as human (new karma). One's choices affects one future. Place to make a difference in your rebirth/life</li> */}
-          </ul>
-        </li>
-        <li>
-            Animal realm - a world of instincts, survival, and self preservations
-          <ul className="">
-            <li className="indent-8 list-disc list-inside">Focused on survival activities. Driven by impulse and instinct, preying on others.</li>
-            <li className="indent-8 list-disc list-inside">Animal birth is seen as the result of past sins, and one expiates these sins through suffering in animal form (being hunted, worked, driven, slaughtered, etc.).</li>
-          </ul>
-        </li>
-        <li>
-            Ghost realm - a world of neediness, addictions, and compulsions.
-          <ul className="">
-            <li className="indent-8 list-disc list-inside">Excessive craving and attachments. Never ending hunger or need, which is never satisfied.</li>
-            <li className="indent-8 list-disc list-inside">Always looking outside themselves for something to satisfy the craving within. Dependency on substances, fixations to things, and compulsion.</li>
-          </ul>
-        </li>
-        <li>
-            Hell realm - a world of agony, terror, and depression.
-          <ul className="">
-            <li className="indent-8 list-disc list-inside">Full of sufferring </li>
-            <li className="indent-8 list-disc list-inside">Experience torment and torture every passing second</li>
-          </ul>
-        </li>
-      </ul>
+
+      {info.filter((element) => (element.realmName === realm))
+        .map((element, i) => {
+          return (
+            <div className="grid gap-1" key={i}>
+              <div>{element.realmName} - {element.description}</div>
+              <ul className="grid gap-1">
+                {element.childrenInfo.map((child, j) => {
+                  return (
+                    <li className="indent-8 list-disc list-inside" key={j}>{child}</li>
+                  );
+                })}
+              </ul>
+            </div>
+          );
+        })
+      }
     </div>
   );
 };
