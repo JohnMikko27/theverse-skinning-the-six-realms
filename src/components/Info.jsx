@@ -1,4 +1,24 @@
-const Info = ( { realm }) => {
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView, backInOut } from "framer-motion";
+
+const Info = ({ realm }) => {
+  const control = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const boxVariant = {
+    visible: { opacity: 1, scale: 1, y: 0},
+    hidden: { opacity: 0, scale: 0, y: 100 },
+  };
+    
+  useEffect(() => {
+    if (isInView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+    // console.log("element is in view", isInView);
+    
+  }, [isInView]);
 
   const info = [
     {realmName: "God realm",
@@ -28,27 +48,29 @@ const Info = ( { realm }) => {
   ];
 
   return (
-    <div className="grid gap-6">
-      <div>
-        In Buddhist cosmology, there are six different realms one can exist in. 
-        These are the God, Demi-god, Human, Animal, Hungry Ghost, and Hell realms. 
-        The six realms are also used as a metaphor for the varying psychological states 
-        of the human mind
-      </div>
-
-      {info.filter((element) => (element.realmName === realm))
+    <div className="">
+      {info.filter((el) => el.realmName === realm)
         .map((element, i) => {
           return (
-            <div className="grid gap-1" key={i}>
+            <motion.div 
+              variants={boxVariant}
+              animate={control}
+              initial="hidden"
+              transition={{duration: .8, ease: backInOut}}
+              ref={ref}
+              className="grid gap-1 mx-16" key={i}>
               <div>{element.realmName} - {element.description}</div>
               <ul className="grid gap-1">
                 {element.childrenInfo.map((child, j) => {
                   return (
-                    <li className="indent-8 list-disc list-inside" key={j}>{child}</li>
+                    <li
+                      className="indent-8 list-disc list-inside" key={j}>
+                      {child}
+                    </li>
                   );
                 })}
               </ul>
-            </div>
+            </motion.div>
           );
         })
       }

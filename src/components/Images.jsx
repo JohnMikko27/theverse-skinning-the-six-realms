@@ -28,7 +28,7 @@ const Images = ({ text, url }) => {
       initial="hidden"
       transition={{duration: .8, ease: backInOut}}
       ref={ref}
-      className="h-screen w-screen p-20"
+      className="h-screen w-screen px-20 py-4"
     >
       <img className=" w-full" src={url} alt={text} />
       <div>{text}</div>
